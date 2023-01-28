@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Ui</title>
+    <link rel="icon" href="/assest/img/light/logo.png" />
+    <link rel="stylesheet" href="/dist/output.css" />
+    <link rel="stylesheet" href="/fontawesome-free-6.1.1-web/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/assest/css/animate.min.css" />
+    <link rel="stylesheet" href="/assest/css/cus.css" />
+  </head>
+  <body>
+    <!-- loading -->
+    <div class="loading">
+      <span class="loader"></span>
+    </div>
+
+    <!-- Navbar -->
+
+    <div
+      id="fixedNav"
+      class="bg-white dark:bg-slate-800 animate__animated w-full shadow-lg"
+    >
+      <div class="container mx-auto py-1 lg:px-20">
+        <div class="flex justify-between items-center">
+          <!-- logo -->
+          <div class="flex items-center lg:z-40">
+            <img
+              src="/assest/img/light/logo.png"
+              alt=""
+              class="w-10 ml-8 lg:ml-0"
+            />
+            <p class="font-bold ml-3 text-green-500">Berryleaf</p>
+          </div>
+          <!-- menu -->
+          <div
+            id="mobile"
+            class="lg:flex fixed lg:static top-0 h-screen lg:h-auto bg-white dark:bg-slate-800 lg:bg-transparent -left-full w-full z-30 lg:z-0 flex justify-center items-center duration-500"
+          >
+            <div
+              id="menu-close"
+              class="lg:hidden top-0 absolute flex items-center justify-center right-0 border border-green-500 w-10 h-10 rounded-full mr-4 mt-3"
+            >
+              <i class="fa-solid fa-xmark text-2xl dark:text-white"></i>
+            </div>
+            <ul
+              class="flex lg:space-x-4 lg:flex-row flex-col space-y-10 lg:space-y-0 items-center lg:text-base text-xl font-bold text-slate-600 dark:text-white"
+            >
+              <a
+                href="#"
+                class="hover:text-green-500 duration-500 transition cursor-pointer active-link"
+              >
+                Home
+              </a>
+              <a
+                href="#"
+                class="hover:text-green-500 duration-500 transition cursor-pointer"
+              >
+                Why?
+              </a>
+              <a
+                href="#"
+                class="hover:text-green-500 duration-500 transition cursor-pointer"
+              >
+                Features
+              </a>
+              <a
+                href="#"
+                class="hover:text-green-500 duration-500 transition cursor-pointer"
+              >
+                Blog
+              </a>
+            </ul>
+          </div>
+
+          <!-- dark-mode -->
+          <div class="flex items-center justify-center scale-50 md:scale-100">
+            <button
+              id="dark-switch"
+              onclick="toggleTheme()"
+              class="border border-slate-500 w-[85px] flex items-center transition duration-200 rounded-full m-2 bg-slate-800 p-1"
+            >
+              <div
+                id="dark-switch-icon"
+                class="bg-slate-50 w-8 h-8 rounded-full transform transition duration-200 flex justify-center items-center"
+              >
+                <i class="fa-regular fa-sun"></i>
+              </div>
+              <h6 id="dark-text" class="text-slate-300 translate-x-1 font-bold">
+                OFF
+              </h6>
+            </button>
+            <div class="lg:hidden mobile-menu">
+              <i class="fa-solid fa-bars ml-9 text-3xl dark:text-white"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- hero section -->
+
+    <section class="bg-slate-100 dark:bg-slate-900 lg:py-20 py-10">
+      <div class="container mx-auto lg:px-20 px-5">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide rounded-3xl overflow-hidden">
+              <img
+                src="/assest/img/code (1).jpg"
+                alt=""
+                class="h-96 relative"
+              />
+              <div class="absolute top-56 lg:left-10 left-3">
+                <h1 class="text-start text-white font-bold lg:text-2xl text-xl">
+                  How CPTS empowers job-ready penetration testing skills <br />
+                  in cybersecurity teams
+                </h1>
+                <button
+                  class="mt-2 lg:mt-5 absolute left-0 px-5 py-3 rounded-xl text-white duration-500 font-bold bg-slate-500 hover:bg-slate-400"
+                >
+                  | 10min read
+                </button>
+                <button
+                  class="mt-2 lg:mt-5 absolute left-40 px-5 py-3 rounded-xl text-white duration-500 font-bold hover:bg-slate-500"
+                >
+                  Oct 04,2022
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide rounded-3xl overflow-hidden">
+              <img
+                src="/assest/img/hack (1).jpg"
+                alt=""
+                class="h-96 relative"
+              />
+              <div class="absolute top-56 lg:left-10 left-3">
+                <h1 class="text-start text-white font-bold lg:text-2xl text-xl">
+                  How CPTS empowers job-ready penetration testing skills <br />
+                  in cybersecurity teams
+                </h1>
+                <button
+                  class="mt-2 lg:mt-5 absolute left-0 px-5 py-3 rounded-xl text-white duration-500 font-bold bg-slate-500 hover:bg-slate-400"
+                >
+                  | 10min read
+                </button>
+                <button
+                  class="mt-2 lg:mt-5 absolute left-40 px-5 py-3 rounded-xl text-white duration-500 font-bold hover:bg-slate-500"
+                >
+                  Oct 04,2022
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide rounded-3xl overflow-hidden">
+              <img
+                src="/assest/img/code (2).jpg"
+                alt=""
+                class="h-96 relative"
+              />
+              <div class="absolute top-56 lg:left-10 left-3">
+                <h1 class="text-start text-white font-bold lg:text-2xl text-xl">
+                  How CPTS empowers job-ready penetration testing skills <br />
+                  in cybersecurity teams
+                </h1>
+                <button
+                  class="mt-2 lg:mt-5 absolute left-0 px-5 py-3 rounded-xl text-white duration-500 font-bold bg-slate-500 hover:bg-slate-400"
+                >
+                  | 10min read
+                </button>
+                <button
+                  class="mt-2 lg:mt-5 absolute left-40 px-5 py-3 rounded-xl text-white duration-500 font-bold hover:bg-slate-500"
+                >
+                  Oct 04,2022
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide rounded-3xl overflow-hidden">
+              <img
+                src="/assest/img/hack (2).jpg"
+                alt=""
+                class="h-96 relative"
+              />
+              <div class="absolute top-56 lg:left-10 left-3">
+                <h1 class="text-start text-white font-bold lg:text-2xl text-xl">
+                  How CPTS empowers job-ready penetration testing skills <br />
+                  in cybersecurity teams
+                </h1>
+                <button
+                  class="mt-2 lg:mt-5 absolute left-0 px-5 py-3 rounded-xl text-white duration-500 font-bold bg-slate-500 hover:bg-slate-400"
+                >
+                  | 10min read
+                </button>
+                <button
+                  class="mt-2 lg:mt-5 absolute left-40 px-5 py-3 rounded-xl text-white duration-500 font-bold hover:bg-slate-500"
+                >
+                  Oct 04,2022
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide rounded-3xl overflow-hidden">
+              <img
+                src="/assest/img/code (3).jpg"
+                alt=""
+                class="h-96 relative"
+              />
+              <div class="absolute top-56 lg:left-10 left-3">
+                <h1 class="text-start text-white font-bold lg:text-2xl text-xl">
+                  How CPTS empowers job-ready penetration testing skills <br />
+                  in cybersecurity teams
+                </h1>
+                <button
+                  class="mt-2 lg:mt-5 absolute left-0 px-5 py-3 rounded-xl text-white duration-500 font-bold bg-slate-500 hover:bg-slate-400"
+                >
+                  | 10min read
+                </button>
+                <button
+                  class="mt-2 lg:mt-5 absolute left-40 px-5 py-3 rounded-xl text-white duration-500 font-bold hover:bg-slate-500"
+                >
+                  Oct 04,2022
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div class="grid lg:grid-cols-4 grid-cols-2 mt-10 lg:text-center gap-5">
+          <div class="headline">
+            <h1 class="my-2 text-emerald-500 text-2xl font-bold">500 +M</h1>
+            <p class="dark:text-white font-bold">Hacking labs</p>
+          </div>
+          <div class="headline">
+            <h1 class="my-2 text-emerald-500 text-2xl font-bold">400 +M</h1>
+            <p class="dark:text-white font-bold">Platform Members</p>
+          </div>
+          <div class="headline">
+            <h1 class="my-2 text-emerald-500 text-2xl font-bold">300 +M</h1>
+            <p class="dark:text-white font-bold">Playtime Hours</p>
+          </div>
+          <div class="headline">
+            <h1 class="my-2 text-emerald-500 text-2xl font-bold">300 +K</h1>
+            <p class="dark:text-white font-bold">Companies & Universities</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- card section -->
+    <section class="bg-white dark:bg-slate-800 py-20" id="why">
+      <div class="container mx-auto lg:px-20 px-5">
+        <div
+          class="grid grid-cols-1 xl:grid-cols-3 lg:gap-16 space-y-16 lg:space-y-0"
+        >
+          <!-- card one -->
+          <div
+            class="headline shadow-xl dark:shadow-green-500 rounded-xl overflow-hidden hover:scale-125 cursor-pointer duration-500"
+          >
+            <img src="/assest/img/hack (1).jpeg" alt="" class="w-full" />
+            <div class="p-5">
+              <h1 class="dark:text-white font-bold text-xs">
+                HACKING | 10MIN READ
+              </h1>
+              <p class="dark:text-white font-bold text-lg mt-3">
+                From Poker Player to Senior Pentester at Oracle: Jeremy's
+                Journey Into Cybersec
+              </p>
+            </div>
+          </div>
+          <!-- card two -->
+          <div
+            class="headline shadow-xl dark:shadow-green-500 rounded-xl overflow-hidden hover:scale-125 cursor-pointer duration-500"
+          >
+            <img src="/assest/img/hack (1).jpg" alt="" class="" />
+            <div class="p-5">
+              <h1 class="dark:text-white font-bold text-xs">
+                HACKING | 10MIN READ
+              </h1>
+              <p class="dark:text-white font-bold text-lg mt-3">
+                From Poker Player to Senior Pentester at Oracle: Jeremy's
+                Journey Into Cybersec
+              </p>
+            </div>
+          </div>
+          <!-- card three -->
+          <div
+            class="headline shadow-xl dark:shadow-green-500 rounded-xl overflow-hidden hover:scale-125 cursor-pointer duration-500"
+          >
+            <img src="/assest/img/hacker-3446.webp" alt="" />
+            <div class="p-5">
+              <h1 class="dark:text-white font-bold text-xs">
+                HACKING | 10MIN READ
+              </h1>
+              <p class="dark:text-white font-bold text-lg mt-3">
+                From Poker Player to Senior Pentester at Oracle: Jeremy's
+                Journey Into Cybersec
+              </p>
+            </div>
+          </div>
+          <!-- card four -->
+          <div
+            class="headline shadow-xl dark:shadow-green-500 rounded-xl overflow-hidden hover:scale-125 cursor-pointer duration-500"
+          >
+            <img src="/assest/img/hack (2).jpeg" alt="" class="w-full" />
+            <div class="p-5">
+              <h1 class="dark:text-white font-bold text-xs">
+                HACKING | 10MIN READ
+              </h1>
+              <p class="dark:text-white font-bold text-lg mt-3">
+                From Poker Player to Senior Pentester at Oracle: Jeremy's
+                Journey Into Cybersec
+              </p>
+            </div>
+          </div>
+          <!-- card five -->
+          <div
+            class="headline shadow-xl dark:shadow-green-500 rounded-xl overflow-hidden hover:scale-125 cursor-pointer duration-500"
+          >
+            <img src="/assest/img/hack (2).jpg" alt="" />
+            <div class="p-5">
+              <h1 class="dark:text-white font-bold text-xs">
+                HACKING | 10MIN READ
+              </h1>
+              <p class="dark:text-white font-bold text-lg mt-3">
+                From Poker Player to Senior Pentester at Oracle: Jeremy's
+                Journey Into Cybersec
+              </p>
+            </div>
+          </div>
+          <!-- card six -->
+          <div
+            class="headline shadow-xl dark:shadow-green-500 rounded-xl overflow-hidden hover:scale-125 cursor-pointer duration-500"
+          >
+            <img src="/assest/img/hack (3).jpg" alt="" />
+            <div class="p-5">
+              <h1 class="dark:text-white font-bold text-xs">
+                HACKING | 10MIN READ
+              </h1>
+              <p class="dark:text-white font-bold text-lg mt-3">
+                From Poker Player to Senior Pentester at Oracle: Jeremy's
+                Journey Into Cybersec
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="/assest/js/jquery-3.6.0.min.js"></script>
+    <script src="/assest/js/jquery.waypoints.min.js"></script>
+    <script src="/assest/js/scrollreveal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="/assest/js/cus.js"></script>
+    <script>
+      //mobile menu
+      const mobileMenu = document.querySelector(".mobile-menu");
+      const mobile = document.querySelector("#mobile");
+      const mobileClose = document.querySelector("#menu-close");
+      mobileMenu.addEventListener("click", () => {
+        mobile.style.left = "0";
+      });
+
+      mobileClose.addEventListener("click", () => {
+        mobile.style.left = "-100%";
+      });
+
+      //swiper
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        rewind: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 2000,
+        },
+      });
+
+      //way point
+      const fixedNav = document.getElementById("fixedNav");
+      var waypoint = new Waypoint({
+        element: document.getElementById("why"),
+        handler: function (direction) {
+          if (direction === "down") {
+            fixedNav.classList.add(
+              "fixed",
+              "top-0",
+              "animate__fadeInDown",
+              "shadow-xl",
+              "z-10"
+            );
+          } else {
+            fixedNav.classList.remove(
+              "fixed",
+              "top-0",
+              "animate__fadeInDown",
+              "z-10"
+            );
+          }
+        },
+        offset: "10%",
+      });
+
+      // scrollreval
+      ScrollReveal().reveal(".headline", {
+        origin: "bottom",
+        distance: "100px",
+        duration: 2000,
+        reset: true,
+        interval: 200,
+        scale: 0.8,
+        viewFactor: 0.2,
+      });
+
+      //loading
+
+      window.addEventListener("load", () => {
+        document.querySelector(".loading").style.display = "none";
+      });
+    </script>
+  </body>
+</html>
